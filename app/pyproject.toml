@@ -39,14 +39,3 @@ source = ["flaskr", "tests"]
 [tool.ruff]
 src = ["src"]
 
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "flaskr"
-version = "1.0.0"
-dependencies = [
-    "flask",
-    "pytest",
-]
