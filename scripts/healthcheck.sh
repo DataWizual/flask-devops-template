@@ -75,7 +75,7 @@ else
   echo "✔ cAdvisor already running"
 fi
 
-# Проверим доступность порта
+# Check the port availability
 if curl -s http://localhost:8080/metrics > /dev/null; then
   echo "✔ cAdvisor metrics available on port 8080"
 else

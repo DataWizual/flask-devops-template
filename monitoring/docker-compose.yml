@@ -32,10 +32,8 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
     volumes:
       - grafana_data:/var/lib/grafana
-    # 🔹 Перекрываем и /etc/grafana/provisioning, и /usr/share/grafana/conf/provisioning
       - ./grafana-disable-default:/usr/share/grafana/conf/provisioning
       - ./grafana-disable-default:/etc/grafana/provisioning
-    # 🔹 Подключаем только твой JSON
       - ./grafana/flask_monitoring_dashboard_pro.json:/var/lib/grafana/dashboards/flask_monitoring_dashboard_pro.json
     networks:
       - monitoring

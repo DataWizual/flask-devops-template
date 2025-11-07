@@ -104,24 +104,25 @@ A fully integrated DevOps infrastructure template including:
 
 ---
 
-## ⚡ Quick Start (Local Setup)
-1️⃣ Run the application and monitoring stack
-```
-cd ~/devops_practice/packaged_solution/monitoring
-docker compose up -d
+## 🚀 Quick Start
 
-# or launch the full stack
-# docker compose -f docker-compose.full.yml up -d
+Run the complete DevOps stack — including Flask app, Prometheus, Grafana, and cAdvisor — with a single command:
+
+```bash
+./scripts/healthcheck.sh
+
 ```
-2️⃣ Deploy the latest image
-```
-cd ~/devops_practice/packaged_solution/scripts
-./deploy.sh
-```
-3️⃣ Access points
-- **Flask App:** http://localhost:5000
-- **Prometheus:** http://localhost:9090
-- **Grafana:** http://localhost:3000  (admin / admin)
+This script will:
+
+- automatically start any missing containers
+- verify that all core services are running (Flask, Prometheus, Grafana, cAdvisor)
+- ensure the monitoring network is active and correctly linked
+- check connectivity on:
+    - **Flask App:** http://localhost:5000
+    - **Prometheus:** http://localhost:9090
+    - **Grafana:** http://localhost:3000  (admin / admin)
+
+🧩 Ideal for first-time setup, local testing, and environment validation.
 
 ## 📊 Grafana Dashboard Customization
 The included dashboard (flask_monitoring_dashboard.json)
